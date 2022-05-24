@@ -1,0 +1,921 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>KorekurverDockWidgetBase</class>
+ <widget class="QDockWidget" name="KorekurverDockWidgetBase">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>526</width>
+    <height>850</height>
+   </rect>
+  </property>
+  <property name="floating">
+   <bool>false</bool>
+  </property>
+  <property name="windowTitle">
+   <string>Kørekurver</string>
+  </property>
+  <widget class="QWidget" name="dockWidgetContents">
+   <layout class="QFormLayout" name="formLayout">
+    <item row="0" column="0" colspan="2">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>30</width>
+        <height>30</height>
+       </size>
+      </property>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>Værktøj</string>
+       </attribute>
+       <widget class="QCheckBox" name="checkBox_160">
+        <property name="geometry">
+         <rect>
+          <x>250</x>
+          <y>300</y>
+          <width>191</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>160 g (144grader)</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_7">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>160</y>
+          <width>91</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Retning</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="radioButton_ja">
+        <property name="geometry">
+         <rect>
+          <x>340</x>
+          <y>120</y>
+          <width>61</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Ja</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+        <attribute name="buttonGroup">
+         <string notr="true">buttonGroup_2</string>
+        </attribute>
+       </widget>
+       <widget class="QRadioButton" name="radioButton_A">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>120</y>
+          <width>51</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>A</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+        <attribute name="buttonGroup">
+         <string notr="true">buttonGroup</string>
+        </attribute>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_133">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>250</x>
+          <y>520</y>
+          <width>201</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>133 g (120grader)</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_180">
+        <property name="geometry">
+         <rect>
+          <x>250</x>
+          <y>340</y>
+          <width>191</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>180 g (162grader)</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_100">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>380</y>
+          <width>181</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>100 g (90grader)</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="radioButton_nej">
+        <property name="geometry">
+         <rect>
+          <x>260</x>
+          <y>120</y>
+          <width>71</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Nej</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+        <property name="autoExclusive">
+         <bool>true</bool>
+        </property>
+        <attribute name="buttonGroup">
+         <string notr="true">buttonGroup_2</string>
+        </attribute>
+       </widget>
+       <widget class="QComboBox" name="comboBox">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>40</y>
+          <width>271</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <item>
+         <property name="text">
+          <string>Bus - 12m</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Bus -12m, S-kurve</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Bus - 13.7m</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Bus - 13.7m, S-kurve</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Bus - 15m</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Bus - 15m, S-kurve</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Bus - 25m</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Bus - 25m, S-kurve</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Lastvogn</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Modulvogntog</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Person- og varevogn</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Påhængsvogntog</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Renovationskøretøj</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Specialkøretøj</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Sættevogntog</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Traktor</string>
+         </property>
+        </item>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_167">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>250</x>
+          <y>480</y>
+          <width>191</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>167 g (150grader)</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="radioButton_B">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>120</y>
+          <width>51</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>B</string>
+        </property>
+        <attribute name="buttonGroup">
+         <string notr="true">buttonGroup</string>
+        </attribute>
+       </widget>
+       <widget class="QToolButton" name="toolButton_rotate">
+        <property name="geometry">
+         <rect>
+          <x>280</x>
+          <y>570</y>
+          <width>41</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>...</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>rotate_Arrow.png</normaloff>rotate_Arrow.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>25</width>
+          <height>25</height>
+         </size>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_3">
+        <property name="geometry">
+         <rect>
+          <x>90</x>
+          <y>10</y>
+          <width>81</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Køretøj</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_33">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>480</y>
+          <width>181</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="inputMethodHints">
+         <set>Qt::ImhNone</set>
+        </property>
+        <property name="text">
+         <string>33 g (30grader)</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_120">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>420</y>
+          <width>191</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>120 g (108grader)</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QToolButton" name="toolButton_move">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>570</y>
+          <width>41</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>...</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>move_arrow.png</normaloff>move_arrow.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>25</width>
+          <height>25</height>
+         </size>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_67">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>520</y>
+          <width>201</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="inputMethodHints">
+         <set>Qt::ImhNone</set>
+        </property>
+        <property name="text">
+         <string>67 g (60 grader)</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_200">
+        <property name="geometry">
+         <rect>
+          <x>250</x>
+          <y>380</y>
+          <width>191</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>200 g (180grader)</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_60">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>310</y>
+          <width>171</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>60 g (54grader)</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_5">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>90</y>
+          <width>101</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Køremåde</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_140">
+        <property name="geometry">
+         <rect>
+          <x>250</x>
+          <y>270</y>
+          <width>181</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>140 g (126grader)</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_40">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>270</y>
+          <width>171</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>40 g (36grader)</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_80">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>340</y>
+          <width>171</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>80 g (72grader)</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_6">
+        <property name="geometry">
+         <rect>
+          <x>280</x>
+          <y>90</y>
+          <width>121</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Spejlvend</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_placere">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>570</y>
+          <width>111</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Tilføj</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>630</y>
+          <width>111</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Fjern</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_stoppe">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>630</y>
+          <width>121</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Afslut</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_11">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>450</y>
+          <width>201</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+          <weight>50</weight>
+          <italic>true</italic>
+          <bold>false</bold>
+          <underline>true</underline>
+         </font>
+        </property>
+        <property name="text">
+         <string>Kun med Modulvogntog</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_info">
+        <property name="geometry">
+         <rect>
+          <x>170</x>
+          <y>90</y>
+          <width>21</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>?</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_skjulAlle">
+        <property name="geometry">
+         <rect>
+          <x>250</x>
+          <y>200</y>
+          <width>111</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Skjul Alle</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_visAlle">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>200</y>
+          <width>111</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Vis Alle</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>Information</string>
+       </attribute>
+       <widget class="QTextBrowser" name="textBrowser_2">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>230</y>
+          <width>441</width>
+          <height>311</height>
+         </rect>
+        </property>
+        <property name="html">
+         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Helvetica','sans-serif'; font-size:8.5pt; color:#000000;&quot;&gt;Under &amp;quot;Køretøjer&amp;quot; kan der vælges type af køretøj. Nedesntående oplysninger er taget fra hjemmesiden&lt;/span&gt;&lt;span style=&quot; font-size:7.8pt;&quot;&gt; &lt;/span&gt;&lt;a href=&quot;http://vejregler.lovportaler.dk/ShowDoc.aspx?t=%2fV1%2fNavigation%2fTillidsmandssystemer%2fVejregler%2fAnlaegsplanlaegning%2ffaelles+for+by+og+land%2fVejgeometri%2farealbehovskurver%2f&amp;amp;docId=vd20190081-full&quot;&gt;&lt;span style=&quot; font-family:'Helvetica','sans-serif'; font-size:8.5pt; text-decoration: underline; color:#0000ff; background-color:#efefef;&quot;&gt;vejregler&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-size:7.8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:7.8pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Helvetica','sans-serif'; font-size:8.5pt; color:#000000;&quot;&gt;Typekøretøj&lt;/span&gt;&lt;span style=&quot; font-size:7.8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Helvetica','sans-serif'; font-size:8.5pt; font-weight:600; color:#000000;&quot;&gt;T&lt;/span&gt;&lt;span style=&quot; font-size:7.8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Helvetica','sans-serif'; font-size:8.5pt; color:#000000;&quot;&gt;Traktor med anhænger og kost&lt;/span&gt;&lt;span style=&quot; font-size:7.8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Helvetica','sans-serif'; font-size:8.5pt; color:#000000;&quot;&gt;Repræsenterer små traktorer anvendt til renhold af stier.&lt;/span&gt;&lt;span style=&quot; font-size:7.8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Helvetica','sans-serif'; font-size:8.5pt; font-weight:600; color:#000000;&quot;&gt;PV&lt;/span&gt;&lt;span style=&quot; font-size:7.8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Helvetica','sans-serif'; font-size:8.5pt; color:#000000;&quot;&gt;Person- og varevogn&lt;/span&gt;&lt;span style=&quot; font-size:7.8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Helvetica','sans-serif'; font-size:8.5pt; color:#000000;&quot;&gt;Repræsenterer almindelige personvogne og små varevogne.&lt;/span&gt;&lt;span style=&quot; font-size:7.8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Helvetica','sans-serif'; font-size:8.5pt; font-weight:600; color:#000000;&quot;&gt;BUS 12&lt;/span&gt;&lt;span style=&quot; font-size:7.8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Helvetica','sans-serif'; font-size:8.5pt; color:#000000;&quot;&gt;12 m bus&lt;/span&gt;&lt;span style=&quot; font-size:7.8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Helvetica','sans-serif'; font-size:8.5pt; color:#000000;&quot;&gt;Anvendes i bytrafik og på busruter med relativt få passagerer i det åbne land.&lt;/span&gt;&lt;span style=&quot; font-size:7.8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Helvetica','sans-serif'; font-size:8.5pt; font-weight:600; color:#000000;&quot;&gt;BUS 13,7&lt;/span&gt;&lt;span style=&quot; font-size:7.8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Helvetica','sans-serif'; font-size:8.5pt; color:#000000;&quot;&gt;13,7 m bus&lt;/span&gt;&lt;span style=&quot; font-size:7.8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Helvetica','sans-serif'; font-size:8.5pt; color:#000000;&quot;&gt;Anvendes i bytrafik og på større oplands- og regionale busruter.&lt;/span&gt;&lt;span style=&quot; font-size:7.8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Helvetica','sans-serif'; font-size:8.5pt; font-weight:600; color:#000000;&quot;&gt;BUS 15&lt;/span&gt;&lt;span style=&quot; font-size:7.8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Helvetica','sans-serif'; font-size:8.5pt; color:#000000;&quot;&gt;15 m bus&lt;/span&gt;&lt;span style=&quot; font-size:7.8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Helvetica','sans-serif'; font-size:8.5pt; color:#000000;&quot;&gt;Anvendes i bytrafik, på større oplands- og regionale busruter og som turistbusser.&lt;/span&gt;&lt;span style=&quot; font-size:7.8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Helvetica','sans-serif'; font-size:8.5pt; font-weight:600; color:#000000;&quot;&gt;BUS 25&lt;/span&gt;&lt;span style=&quot; font-size:7.8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Helvetica','sans-serif'; font-size:8.5pt; color:#000000;&quot;&gt;25 m flerleddet bus&lt;/span&gt;&lt;span style=&quot; font-size:7.8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Helvetica','sans-serif'; font-size:8.5pt; color:#000000;&quot;&gt;Anvendes i bytrafik og på større oplands- og regionale busruter.&lt;/span&gt;&lt;span style=&quot; font-size:7.8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Helvetica','sans-serif'; font-size:8.5pt; font-weight:600; color:#000000;&quot;&gt;AUT&lt;/span&gt;&lt;span style=&quot; font-size:7.8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Helvetica','sans-serif'; font-size:8.5pt; color:#000000;&quot;&gt;Autocamper&lt;/span&gt;&lt;span style=&quot; font-size:7.8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Helvetica','sans-serif'; font-size:8.5pt; color:#000000;&quot;&gt;Repræsenterer autocampere og mellemstore varevogne&lt;/span&gt;&lt;span style=&quot; font-size:7.8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Helvetica','sans-serif'; font-size:8.5pt; font-weight:600; color:#000000;&quot;&gt;REN&lt;/span&gt;&lt;span style=&quot; font-size:7.8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Helvetica','sans-serif'; font-size:8.5pt; color:#000000;&quot;&gt;Renovationskøretøj/ lastbil 10 m&lt;/span&gt;&lt;span style=&quot; font-size:7.8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Helvetica','sans-serif'; font-size:8.5pt; color:#000000;&quot;&gt;Repræsenterer renovationskøretøjer og lastvogne på op til 10 m's længde.&lt;/span&gt;&lt;span style=&quot; font-size:7.8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Helvetica','sans-serif'; font-size:8.5pt; font-weight:600; color:#000000;&quot;&gt;LV&lt;/span&gt;&lt;span style=&quot; font-size:7.8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Helvetica','sans-serif'; font-size:8.5pt; color:#000000;&quot;&gt;Lastvogn&lt;/span&gt;&lt;span style=&quot; font-size:7.8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Helvetica','sans-serif'; font-size:8.5pt; color:#000000;&quot;&gt;Repræsenterer større lastvogne på op til 12 m's længde.&lt;/span&gt;&lt;span style=&quot; font-size:7.8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Helvetica','sans-serif'; font-size:8.5pt; font-weight:600; color:#000000;&quot;&gt;PVT&lt;/span&gt;&lt;span style=&quot; font-size:7.8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Helvetica','sans-serif'; font-size:8.5pt; color:#000000;&quot;&gt;Påhængsvogntog&lt;/span&gt;&lt;span style=&quot; font-size:7.8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Helvetica','sans-serif'; font-size:8.5pt; color:#000000;&quot;&gt;Repræsenterer lastvogne med almindelig anhænger.&lt;/span&gt;&lt;span style=&quot; font-size:7.8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Helvetica','sans-serif'; font-size:8.5pt; font-weight:600; color:#000000;&quot;&gt;SVT&lt;/span&gt;&lt;span style=&quot; font-size:7.8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Helvetica','sans-serif'; font-size:8.5pt; color:#000000;&quot;&gt;Sættevogntog&lt;/span&gt;&lt;span style=&quot; font-size:7.8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Helvetica','sans-serif'; font-size:8.5pt; color:#000000;&quot;&gt;Repræsenterer sættevogntog. Sættevogntog har ved svingning og i rundkørsler normalt et større arealbehov end påhængsvogntog.&lt;/span&gt;&lt;span style=&quot; font-size:7.8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Helvetica','sans-serif'; font-size:8.5pt; font-weight:600; color:#000000;&quot;&gt;MVT*&lt;/span&gt;&lt;span style=&quot; font-size:7.8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Helvetica','sans-serif'; font-size:8.5pt; color:#000000;&quot;&gt;Modulvogntog&lt;/span&gt;&lt;span style=&quot; font-size:7.8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Helvetica','sans-serif'; font-size:8.5pt; color:#000000;&quot;&gt;Repræsenterer et op til 25,25 m langt vogntog koblet sammen af 2 eller 3 standard køretøjsenheder (lastbil, anhænger, trækker, sættevogn eller kærre).&lt;/span&gt;&lt;span style=&quot; font-size:7.8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Helvetica','sans-serif'; font-size:8.5pt; font-weight:600; color:#000000;&quot;&gt;SK&lt;/span&gt;&lt;span style=&quot; font-size:7.8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Helvetica','sans-serif'; font-size:8.5pt; color:#000000;&quot;&gt;Specialkøretøj&lt;/span&gt;&lt;span style=&quot; font-size:7.8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Helvetica','sans-serif'; font-size:8.5pt; color:#000000;&quot;&gt;Repræsenterer specialkøretøjer med en længde på 22 m, når køretøjet har fast bagaksel, 26 m, når køretøjet har automatisk tvangsstyrede aksler og 30 m, når køretøjet har manuelt tvangsstyrede aksler (Den forreste aksel kan dog være uden tvangsstyring). Arealbehovet for de tre ovennævnte er stort set ens.&lt;/span&gt;&lt;span style=&quot; font-size:7.8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_10">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>200</y>
+          <width>71</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Køretøjer</string>
+        </property>
+       </widget>
+       <widget class="QTextBrowser" name="textBrowser">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>50</y>
+          <width>441</width>
+          <height>141</height>
+         </rect>
+        </property>
+        <property name="verticalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
+        <property name="horizontalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
+        <property name="html">
+         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Helvetica','sans-serif'; font-size:8.5pt; color:#000000;&quot;&gt;Med dette værktøj kan der vises kørekurver på et kort. Kørekurverne kan flyttes rundt i kortet, roteres og spejles. For nogle af kørekurverne er der lagt filter ind så man kan vælge kun at få vist for nogle specifikke retninger (opgjort i gon og grader). Data er hentet som DWG filer fra Vejdirektoratets hjemmeside og konverteret til postgis. Der er ikke foretaget afstandskorrektion. Det betyder at der for et kort der bruger UTM32-ETRS89 kan være en afvigelse på op til 3 cm ift de oprindelige CAD-filer. CAD filer er henter fra &lt;/span&gt;&lt;a href=&quot;https://www.vejdirektoratet.dk/side/koerekurver&quot;&gt;&lt;span style=&quot; font-family:'Helvetica','sans-serif'; font-size:8.5pt; text-decoration: underline; color:#0000ff;&quot;&gt;https://www.vejdirektoratet.dk/side/koerekurver&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-size:7.8pt;&quot;&gt;  &lt;/span&gt;&lt;span style=&quot; font-family:'Helvetica','sans-serif'; font-size:8.5pt; color:#000000;&quot;&gt;Her kan du også finde PDF'er med kørekurver.&lt;/span&gt;&lt;span style=&quot; font-size:7.8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_9">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>111</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Om kørekurver</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_8">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>550</y>
+          <width>141</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Køremåde A og B</string>
+        </property>
+       </widget>
+       <widget class="QTextBrowser" name="textBrowser_3">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>580</y>
+          <width>441</width>
+          <height>161</height>
+         </rect>
+        </property>
+        <property name="html">
+         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Helvetica','sans-serif'; font-size:8.5pt; color:#000000;&quot;&gt;Køremåde er et udtryk for hastighed. Følgende er taget fra hjemmesiden vejregler&lt;/span&gt;&lt;span style=&quot; font-size:7.8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Symbol'; font-size:8.5pt; color:#000000;&quot;&gt;·&lt;/span&gt;&lt;span style=&quot; font-family:'Times New Roman'; font-size:7pt; color:#000000;&quot;&gt;        &lt;/span&gt;&lt;span style=&quot; font-family:'Helvetica','sans-serif'; font-size:8.5pt; color:#000000;&quot;&gt;I kryds anvendes ved køremåde A en hastighed på 20 km/h for personbiler og 15 km/h for større køretøjer (bør reduceres til 5 km/h ved indsvingning fra sekundærvej eller fra kanalisering), mens der ved køremåde B nvendes 5 km/h for alle køretøjstyper.&lt;/span&gt;&lt;span style=&quot; font-size:7.8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Symbol'; font-size:8.5pt; color:#000000;&quot;&gt;·&lt;/span&gt;&lt;span style=&quot; font-family:'Times New Roman'; font-size:7pt; color:#000000;&quot;&gt;        &lt;/span&gt;&lt;span style=&quot; font-family:'Helvetica','sans-serif'; font-size:8.5pt; color:#000000;&quot;&gt;På strækninger anvendes ved køremåde A den tilladte hastighed, mens der ved køremåde B kan anvendes en lavere hastighed.&lt;/span&gt;&lt;span style=&quot; font-size:7.8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Symbol'; font-size:8.5pt; color:#000000;&quot;&gt;·&lt;/span&gt;&lt;span style=&quot; font-family:'Times New Roman'; font-size:7pt; color:#000000;&quot;&gt;        &lt;/span&gt;&lt;span style=&quot; font-family:'Helvetica','sans-serif'; font-size:8.5pt; color:#000000;&quot;&gt;Ved køremåde A ligger arealbehovet indenfor køretøjets eget kørespor, mens det ved køremåde B også kan benytte køresporsarealer for modsatrettet trafik (hvis dette kan ske uden overskridelse af spærrelinjer) eller kantbaner.&lt;/span&gt;&lt;span style=&quot; font-size:7.8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Symbol'; font-size:8.5pt; color:#000000;&quot;&gt;·&lt;/span&gt;&lt;span style=&quot; font-family:'Times New Roman'; font-size:7pt; color:#000000;&quot;&gt;        &lt;/span&gt;&lt;span style=&quot; font-family:'Helvetica','sans-serif'; font-size:8.5pt; color:#000000;&quot;&gt;Ved køremåde B anvendes en anden hjuldrejning end i køremåde A. For køremåde B er det valgt at anvende en maksimal hjuldrejning forskellig fra køretøj til køretøj, som tager udgangspunkt i, hvor meget køretøjerne kan dreje. Forhold omkring hjuldrejning er nærmere beskrevet i håndbogen ”Grundlag for udformning af trafikarealer.”&lt;/span&gt;&lt;span style=&quot; font-size:7.8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>comboBox</tabstop>
+  <tabstop>pushButton_info</tabstop>
+  <tabstop>radioButton_A</tabstop>
+  <tabstop>radioButton_B</tabstop>
+  <tabstop>radioButton_nej</tabstop>
+  <tabstop>radioButton_ja</tabstop>
+  <tabstop>pushButton_visAlle</tabstop>
+  <tabstop>pushButton_skjulAlle</tabstop>
+  <tabstop>checkBox_40</tabstop>
+  <tabstop>checkBox_60</tabstop>
+  <tabstop>checkBox_80</tabstop>
+  <tabstop>checkBox_100</tabstop>
+  <tabstop>checkBox_120</tabstop>
+  <tabstop>checkBox_140</tabstop>
+  <tabstop>checkBox_160</tabstop>
+  <tabstop>checkBox_180</tabstop>
+  <tabstop>checkBox_200</tabstop>
+  <tabstop>checkBox_33</tabstop>
+  <tabstop>checkBox_67</tabstop>
+  <tabstop>checkBox_167</tabstop>
+  <tabstop>checkBox_133</tabstop>
+  <tabstop>pushButton_placere</tabstop>
+  <tabstop>toolButton_move</tabstop>
+  <tabstop>toolButton_rotate</tabstop>
+  <tabstop>pushButton_stoppe</tabstop>
+  <tabstop>pushButton</tabstop>
+  <tabstop>textBrowser_3</tabstop>
+  <tabstop>textBrowser</tabstop>
+  <tabstop>textBrowser_2</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+ <buttongroups>
+  <buttongroup name="buttonGroup"/>
+  <buttongroup name="buttonGroup_2"/>
+ </buttongroups>
+</ui>
