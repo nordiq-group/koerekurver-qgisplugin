@@ -1118,12 +1118,16 @@ class Korekurver:
                 action.trigger()
 
     def stoppe(self):   
+        k=1   
         for lyr in QgsProject.instance().mapLayers().values():
+            #STOP EDITING AND ASKS
             if lyr.name() == "Kørekurver":
                 lyr.commitChanges()
-        #STOP EDITING AND ASKS
-        self.iface.vectorLayerTools().stopEditing(lyr,False)
-        lyr.removeSelection()
+                self.iface.vectorLayerTools().stopEditing(lyr,False)
+                lyr.removeSelection()
+                k=2
+        if k==1:
+            iface.messageBar().pushMessage("Error", "Du skal tilføje laget først!", level=Qgis.Critical, duration=3)
 
     def rotate(self):
         for lyr in QgsProject.instance().mapLayers().values():

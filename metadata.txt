@@ -6,7 +6,7 @@
 name=Korekurver
 qgisMinimumVersion=3.20
 description=Med Kørekurver kan der vises kørekurver på et kort.
-version=0.1
+version=1.1
 author=Nordiq Group
 email=stb@nordiq-group.dk
 
