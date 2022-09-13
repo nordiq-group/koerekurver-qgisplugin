@@ -953,11 +953,12 @@ class Korekurver:
             if lyr.name() == "Selected features":
                 lyr.setName('Kørekurver')
                 self.layer= lyr
+            elif lyr.name() == "Valgte objekter":
+                lyr.setName('Kørekurver')
+                self.layer= lyr
 
 
     def direction(self,layer):
-        #if self.addCheckDB.isChecked():
-            #self.addCheck.setChecked(False)
         sd = self.dockwidget
         cB33= sd.checkBox_33
         cB40= sd.checkBox_40
@@ -1038,7 +1039,11 @@ class Korekurver:
             elif lr.name() == "Selected features":
                 lr.setName('Kørekurver')
                 self.layer= lr
-        
+            elif lr.name() == "Valgte objekter":
+                lr.setName('Kørekurver')
+                self.layer= lr
+
+
         #Check Values                    
         # uniquevalues = []
         # uniqueprovider = self.layer.dataProvider()
@@ -1061,6 +1066,8 @@ class Korekurver:
         for lyr in QgsProject.instance().mapLayers().values():  
             if lyr.name() == "Transformed":
                 layer= lyr  
+            elif lyr.name() == "Transformeret":
+                layer= lyr
         self.canvas = self.iface.mapCanvas()
         e = self.iface.mapCanvas().extent()
         x_center=(e.xMaximum()+e.xMinimum())/2
@@ -1069,6 +1076,8 @@ class Korekurver:
         processing.runAndLoadResults("native:translategeometry", {'INPUT': layer,'DELTA_X':x_center-50,'DELTA_Y':y_center-40,'DELTA_Z':0,'DELTA_M':0,'OUTPUT':'TEMPORARY_OUTPUT'})
         for lyr in QgsProject.instance().mapLayers().values():
             if lyr.name() == "Transformed":
+                QgsProject.instance().removeMapLayer(lyr.id())
+            elif lyr.name() == "Transformeret":
                 QgsProject.instance().removeMapLayer(lyr.id())
         for lyr in QgsProject.instance().mapLayers().values():  
             if lyr.name() == "Kørekurver":
@@ -1086,6 +1095,8 @@ class Korekurver:
     def setStyle(self,layer):
         for lyr in QgsProject.instance().mapLayers().values():
             if lyr.name() == "Translated":
+                layer= lyr
+            elif lyr.name() == "Oversat":
                 layer= lyr
         lines = {'1': ('orange', 'dash', 'B-Linjer'),
                  '0':('red', 'simple','Hovedlinje')}
@@ -1118,16 +1129,12 @@ class Korekurver:
                 action.trigger()
 
     def stoppe(self):   
-        k=1   
         for lyr in QgsProject.instance().mapLayers().values():
-            #STOP EDITING AND ASKS
             if lyr.name() == "Kørekurver":
                 lyr.commitChanges()
-                self.iface.vectorLayerTools().stopEditing(lyr,False)
-                lyr.removeSelection()
-                k=2
-        if k==1:
-            iface.messageBar().pushMessage("Error", "Du skal tilføje laget først!", level=Qgis.Critical, duration=3)
+        #STOP EDITING AND ASKS
+        self.iface.vectorLayerTools().stopEditing(lyr,False)
+        lyr.removeSelection()
 
     def rotate(self):
         for lyr in QgsProject.instance().mapLayers().values():
